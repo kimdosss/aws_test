@@ -32,7 +32,8 @@ mongoose.connect(url, function (err, db) {
 	//db.close();
 });
 
-app.listen(8000, function () {
+app.set('port', process.env.PORT || 8000);
+app.listen(app.get('port'), function () {
 	console.log('8000');
 });
 
