@@ -44,7 +44,13 @@
 	<span>id: {{items.name}}</span>
 	<span>content: {{items.text}}</span>
 </div>
-
+<span>-----------------</span>
+<h3>All</h3>
+<button ng-click="loadAll()">LoadAll</button>
+<div ng-repeat="items in allContents | orderBy:'name'">
+	<span>id: {{items.name}}</span>
+	<span>content: {{items.text}}</span>
+</div>
 
 </body>
 </html>

@@ -6,7 +6,7 @@ appCon.controller('pageCon', ['$scope', 'testService',  function($scope, testSer
 
 		testService.findAllData($scope.findText).success(function(data){
 			$scope.content = data;
-			console.log($scope.content)
+			//console.log($scope.content)
 		});		
 	}
 
@@ -18,6 +18,13 @@ appCon.controller('pageCon', ['$scope', 'testService',  function($scope, testSer
 
 	}
 
+	$scope.loadAll = function(){
+		testService.loadData().success(function(data){
+			$scope.allContents = data;
+			//console.log(data)
+		})
+	}
+	
 
 
 
@@ -27,8 +34,8 @@ appCon.controller('pageCon', ['$scope', 'testService',  function($scope, testSer
 
 app.factory('testService', function($http){
 	var factory = {
-		findData: function(){
-			return $http.get('/find');
+		loadData: function(){
+			return $http.get('/test');
 		},
 
 		findAllData: function(findname){
