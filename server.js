@@ -15,7 +15,7 @@ var url = 'mongodb://Kim1:MONGO12345job@ds040489.mlab.com:40489/kimdb'
 
 //Schema 
 var testSchema = new Schema({
-	name: Number,
+	name: String,
 	text: String
 });
 //Modal
