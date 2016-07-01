@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+  	<!--angular-->
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script src="https://code.angularjs.org/1.5.6/angular-touch.min.js"></script>
+
+	<!--css-->
+	<link rel="stylesheet" href="css/index.css">
+	
+	<!--js-->
+	<script src="js/app.js"></script>
+	<script src="js/directive.js"></script>
+ 	<script src="js/controllers.js"></script>
+
+ 	<!-- bootstrap -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+</head>
+<body ng-app="pageApp" ng-controller="pageCon">
+
+<form ng-submit="Input()">
+	<h3>Input</h3>
+	<input type="text" ng-model="inputName" placeholder="name" />
+	<input type="text" ng-model="inputText" placeholder="text" />
+	<button type="submit">submit</button>
+</form>
+
+
+<form ng-submit="find()">
+	<h3>Search</h3>
+	<input type="text" ng-model="findText" />
+	<button type="submit">submit</button>
+
+</form>
+
+<div ng-repeat="items in content">
+	<span>id: {{items.name}}</span>
+	<span>content: {{items.text}}</span>
+</div>
+
+
+</body>
+</html>
